@@ -34,7 +34,7 @@ public class Persistencia {
                 float ratio = (float) mutantecuentaM / (float) total;
                 try {
                     response.put("count_mutant_dna", mutantecuentaM);
-                    response.put("count_human_dna", (total - mutantecuentaM));
+                    response.put("count_human_dna", (total));
                     response.put("ratio", String.format("%.2f", ratio));
                     res = response.toString();
                 } catch (JSONException ex) {
