@@ -1,7 +1,7 @@
 # RetoMutante
 Reto mutante proceso de seleccion
 
-# Descripcion
+# Descripción
 En este repositorio se tienen 2 proyectos en java construidos con maven.
 
 El primer proyecto ubicado en la carpeta RetoMutante contiene la lógica para los niveles 1 y 2
