@@ -1,4 +1,4 @@
-# RetoMutante
+# Reto Mutante
 Reto mutante proceso de seleccion
 
 # Descripción
@@ -20,9 +20,14 @@ Se Seleccionó utilizar DynamoDB al ser una Base de datos No relacional la cual 
 
 Se utiliza el API gateway ya que cuenta con niveles de Alta disponibilidad y seguridad para integraciones HTTP las cuales pasan a ser segurasautomaticamente a traves de HTTPS.
 
+Diagrama de referencia:
+<img src="https://i.ibb.co/ZW0rDjx/diagrama.png">
+
 # Modo de uso del servicio
 En un cliente HTTP como Postman o jmeter consumir los siguientes servicios:
 1. Verificar mutante: https://mw8c3vnril.execute-api.us-east-1.amazonaws.com/test/mutant/
+
+
 Metodo POST
 Body ejemplo:
 {
@@ -33,6 +38,7 @@ Body ejemplo:
 Este metodo cumple con los requisitos funcionales solicitados para el nivel 1 del reto.
 
 2. Consultar estadisticas https://mw8c3vnril.execute-api.us-east-1.amazonaws.com/test/mutant/stats
+
 Metodo GET
 
 No hay restriccion de horarios o indisponibilidad de ambientes de acuerdo a la arquitectura presentada.
