@@ -30,16 +30,13 @@ En un cliente HTTP como Postman o jmeter consumir los siguientes servicios:
 
 Metodo POST
 Body ejemplo:
-{
-    
-    "dna":["ATCTTT","TTAATC","TTATGT","ATAAGG","ACCCTA","TCACTG"]
+{ "dna":["ATCTTT","TTAATC","TTATGT","ATAAGG","ACCCTA","TCACTG"]  }
 
-}
+
 Este metodo cumple con los requisitos funcionales solicitados para el nivel 1 del reto.
 
 2. Consultar estadisticas https://mw8c3vnril.execute-api.us-east-1.amazonaws.com/test/mutant/stats
 
 Metodo GET
 
-No hay restriccion de horarios o indisponibilidad de ambientes de acuerdo a la arquitectura presentada.
-
+No hay restriccion de horarios o indisponibilidad de ambientes para ejecutar pruebas del servicio.
