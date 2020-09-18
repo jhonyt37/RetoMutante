@@ -2,31 +2,33 @@
 Reto mutante proceso de seleccion
 
 # Descripción
-En este repositorio se tienen 2 proyectos en java construidos con maven.
+En este repositorio se tienen 2 proyectos en java 8 construidos con maven.
 
-El primer proyecto ubicado en la carpeta RetoMutante contiene la lógica para los niveles 1 y 2
-El segundo proyecto en la carpeta StatsMutante contiene un aplicativo muy sencillo que cumple con la funcionalidad solicitada en el nivel 3 del reto.
+El primer proyecto se encuentra ubicado en la carpeta RetoMutante, contiene la lógica para los niveles 1 y 2
+El segundo proyecto esta en la carpeta StatsMutante y contiene un aplicativo sencillo que cumple con la funcionalidad solicitada en el nivel 3 del reto.
 
 # Despliegue Cloud
-Para completar el rto nivel 2 y 3 se selecciono realizar el despliegue en AWS utilizando los siguientes servicios:
+Para completar el reto nivel 2 y 3 se seleccionó realizar el despliegue en el cloud de AWS utilizando los siguientes servicios:
 
 * AWS LAmbda(2 funciones)
 * AWS API gateway (2 servicios)
 * DynamoDB
 
-La principal ventaja de elegir el modelo de AWS lambda es el consumo por demanda de las cargas de trabajo del servicio, con ello se reducen costos de implementacion y por otra parte se garantiza niveles de disponibilidad y escalabilidad del sistema de acuerdo con los SLA de AWS Lambda. Con esto se pueden garantizar servicio para 20 o un millon de usuarios y el pago del cloud sera directamente proporcional a la demanda de recursos.
+Esta arquitectura simple y eficiente es potente y satisface las necesidades del reto con fluctuaciones de carga agresivas sin degradacion de servicio.
 
-Se Seleccionó utilizar DynamoDB al ser una Base de datos No relacional la cual tiene alta flexibilidad y performance para escalamiento en tiempo cercano al real. Adicionl para efectos del reto se aprovecha la capa free de dynamoDB
+La principal ventaja de elegir el modelo de AWS lambda es el consumo por demanda de las cargas de trabajo del servicio, con ello se reducen costos de implementación y por otra parte se garantiza niveles de disponibilidad y escalabilidad del sistema de acuerdo con los SLA de AWS Lambda. 
 
-Se utiliza el API gateway ya que cuenta con niveles de Alta disponibilidad y seguridad para integraciones HTTP las cuales pasan a ser segurasautomaticamente a traves de HTTPS.
+Se Seleccionó utilizar DynamoDB al ser una Base de datos No relacional la cual tiene alta flexibilidad y performance para escalamiento en tiempo cercano al real. Adicional, para efectos del reto se aprovecha la capa free de dynamoDB en AWS.
 
-Diagrama de referencia:
+Se utiliza el servicio administrado de AWS API gateway ya que facilita la implementacon de APIS y cuenta con niveles de Alta disponibilidad y seguridad para integraciones HTTPS.
+
+# Diagrama de referencia:
 <img src="https://i.ibb.co/ZW0rDjx/diagrama.png">
 
 # Modo de uso del servicio
 En un cliente HTTP como Postman o jmeter consumir los siguientes servicios:
-1. Verificar mutante: https://mw8c3vnril.execute-api.us-east-1.amazonaws.com/test/mutant/
 
+1. Verificar mutante: https://mw8c3vnril.execute-api.us-east-1.amazonaws.com/test/mutant/
 
 Metodo POST
 Body ejemplo:
