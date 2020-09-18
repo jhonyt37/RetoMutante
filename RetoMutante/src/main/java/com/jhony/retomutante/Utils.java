@@ -22,6 +22,9 @@ public class Utils {
     private static final int HACIA_ABAJO = 2;
     private static final int HACIA_IZQUIERDA_ABAJO = 3;
     
+    private Utils() {
+        throw new IllegalStateException("Utility class");
+    }
     /**
      * Metodo que valida el patron de posibles caracteres validos de entrada
      * @param input String con los valores de entrada de un registro

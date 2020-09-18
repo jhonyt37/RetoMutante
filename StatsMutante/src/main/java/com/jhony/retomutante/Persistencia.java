@@ -24,6 +24,9 @@ import org.json.JSONObject;
  */
 public class Persistencia {
 
+    private Persistencia() {
+        throw new IllegalStateException("Utility class");
+    }
     public static String armarRespuesta(int total, int mutantecuentaM){
         String res=null;
                     if (total > 0) {

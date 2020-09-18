@@ -43,7 +43,7 @@ public class Handler implements RequestStreamHandler {
                 String line;
                 StringBuilder sb = new StringBuilder();
                 while ((line = reader.readLine()) != null) {
-                    //logger.log("paso 1 " + line);
+                    
                     sb.append(line);
                 }
                 line = sb.toString();
@@ -54,9 +54,10 @@ public class Handler implements RequestStreamHandler {
                     res = data;
                 }
                 
-                //logger.log("linea " + line);
             } catch (Exception ex) {
-                //logger.log("error entrada " + ex.getMessage());
+                if (logger != null) {
+                    logger.log("error entrada " + ex.getMessage());
+                }
             }
         }
         return res;
@@ -92,17 +93,19 @@ public class Handler implements RequestStreamHandler {
                     
                 } else {
                     response.put(LLAVE_JSON, "Forbidden");
-                    tipo ="humano";;
+                    tipo ="humano";
                 }
                 Persistencia.save(tipo, dataInput,context);
 
             }
         } catch (Exception ex) {
-            logger.log("error de proceso " + ex.getMessage());
+            if (logger != null) {
+                logger.log("error de proceso " + ex.getMessage());
+            }
         }
 
         if (outputStream != null) {
-            try ( OutputStreamWriter writer = new OutputStreamWriter(outputStream,  StandardCharsets.UTF_8)) {
+            try ( OutputStreamWriter writer = new OutputStreamWriter(outputStream, StandardCharsets.UTF_8)) {
                 writer.write(response.toString());
             }
         }

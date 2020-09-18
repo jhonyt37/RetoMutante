@@ -76,7 +76,7 @@ public class Mutante {
     private List<Coordenada> encuentraLimitesValidos(Coordenada actual) {
         int filaActual = actual.getFila();
         int colActual = actual.getColumna();
-        List<Coordenada> lista = new ArrayList<Coordenada>();
+        List<Coordenada> lista = new ArrayList<>();
 
         
         //limite derecho

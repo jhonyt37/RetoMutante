@@ -2,11 +2,8 @@ package com.jhony.retomutante;
 
 
 import com.amazonaws.services.lambda.runtime.Context;
-import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -38,7 +35,7 @@ public class Handler implements RequestStreamHandler {
         }
         if (outputStream != null) {
             try ( OutputStreamWriter writer = new OutputStreamWriter(outputStream, StandardCharsets.UTF_8)) {
-                System.out.println("res() " + res);
+               
                 writer.write(res);
             }
         }

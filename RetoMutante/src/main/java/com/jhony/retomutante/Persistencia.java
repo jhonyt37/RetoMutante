@@ -20,6 +20,10 @@ import com.amazonaws.services.lambda.runtime.Context;
  */
 public class Persistencia {
 
+    private Persistencia() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static int calcularLlave(String[] array) {
         String res = "";
         StringBuilder st = new StringBuilder();

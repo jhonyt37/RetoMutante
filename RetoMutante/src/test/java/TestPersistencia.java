@@ -29,14 +29,4 @@ public class TestPersistencia {
         Assertions.assertEquals(hash,compare.hashCode());
     }
     
-        @Test
-    public void testConstructor() {
-        try {
-            new Persistencia();
-
-        } catch (Exception e) {
-            fail(e.getMessage());
-        }
-    }
-
 }

@@ -52,12 +52,8 @@ public class Coordenada {
         }
 
         Coordenada otherKey = (Coordenada) object;
-        if (otherKey.getFila() != this.getFila()
-                || otherKey.getColumna() != this.getColumna()) {
-            return false;
-        }
-
-        return true;
+        return !(otherKey.getFila() != this.getFila()
+                || otherKey.getColumna() != this.getColumna());
     }
     
      @Override
